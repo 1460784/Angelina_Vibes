@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelina Vibes - Premium Apparel & Wall Art</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio controls>
+ <source src="https://cdn.pixabay.com/download/audio/2026/02/11/audio_d89ad9f5a0.mp3?filename=prettyjohn1-romantics-love-valentines-day_39sec-483360.mp3" type="audio/mp3">
+</audio>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Angelina Vibes</h1>
+                    <p class="tagline">Premium Apparel & Wall Art</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#products" class="nav-link">Shop</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="cart-btn" id="cartBtn">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Maximise Your Style</h2>
+            <p>Discover our unique collection of premium apparel and stunning wall art</p>
+            <button class="btn btn-primary" onclick="scrollToProducts()">Shop Now</button>
+        </div>
+        <video width="320" height="240" controls>
+    <source src="https://cdn.pixabay.com/video/2026/02/09/333600.mp4?download" type="video/mp4">
+</video>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <h3>Filter Products</h3>
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter" onchange="applyFilters()">
+                        <option value="">All Categories</option>
+                        <option value="shirts">Shirts</option>
+                        <option value="wall-art">Wall Art</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="hoodies">Hoodies</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="priceFilter">Max Price:</label>
+                    <input type="range" id="priceFilter" min="0" max="500" value="500" onchange="applyFilters()">
+                    <span id="priceValue">$500</span>
+                </div>
+                <div class="filter-group">
+                    <label for="sortFilter">Sort:</label>
+                    <select id="sortFilter" onchange="applyFilters()">
+                        <option value="">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+                <button class="btn btn-secondary" onclick="resetFilters()">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2>Our Collection</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>About Angelina Vibes</h2>
+<img src="https://cdn.pixabay.com/photo/2022/04/15/07/58/sunset-7133867_1280.jpg" alt="Description of the image">
+            <p>We are committed to providing high-quality, stylish apparel and unique wall art for those who value self-expression and quality craftsmanship. Every piece in our collection is carefully curated to bring vibrancy and personality to your wardrobe and living space.
+                On a personal note, we also love beauty, and adventure!!!
+            </p>
+        </div>
+    </section>
+</html>
